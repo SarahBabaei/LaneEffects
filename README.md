@@ -3,6 +3,8 @@
 Here is supplementary information and dataset information for the Babaei et al. manuscript entitled '**Evaluating Ordination and Outlier Methods for Lane Effect Mitigation in Reduced Representation Sequencing Data**'.
 Authors: Sarah Babaei, Nathalie M. LeBlanc, Scott A. Pavey, Cassidy C. D'Aloia
 
+See **SupplementaryFiltering/txt** for more information regarding filtering for the original and lane-effect free datasets.
+
 See **LaneEffectMethods.txt** for further information on each method and where to find its corresponding dataset.
 Please note that all GENEPOP files have been compressed in .zip folders with matching names.
 
