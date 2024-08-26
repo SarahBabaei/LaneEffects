@@ -1,8 +1,8 @@
-A) Before lane effect mitigation, 25,784 SNPs. 
-B) snpgdsPCACorr >0.3 on PC1 and PC2. 119 SNPs removed, 25,665 SNPs remaining. 
-C) BayeScan outliers uncommon between the HiSeq and HiSeq+NovaSeq datasets. 955 SNPs removed, 24,829 SNPs remaining. 
-D) Top 5% of SNPs affecting PC1 removed. 1290 SNPs removed, 24,494 SNPs remaining. 
-E) Top 10% of SNPs affecting PC1 removed. 2579 SNPs removed, 23,205 SNPs remaining. 
-F) Top 5% of SNPs affecting DAPC. 1290 SNPs removed, 24,494 SNPs remaining. 
-G) Top 10% of SNPs affecting DAPC. 2579 SNPs removed, 23,205 SNPs remaining. 
-H) Lane Effect Free Dataset. 319 individuals, 38,111 SNPs.
+A) Before lane effect mitigation, 25,784 SNPs. (NEUTRAL_testmissingindv_0.2_library1rem_NonNucrem.gen)
+B) snpgdsPCACorr >0.3 on PC1 and PC2. 119 SNPs removed, 25,665 SNPs remaining. (NEUTRAL_snpgdsPCACorr0.3_5pop_testmissingindv0.2_library1rem_NonNucrem.gen)
+C) BayeScan outliers uncommon between the HiSeq and HiSeq+NovaSeq datasets. 955 SNPs removed, 24,829 SNPs remaining. (NEUTRAL_BAYESCANOUTLIERS_testmissingindv0.2_library1rem_NonNucrem.gen)
+D) Top 5% of SNPs affecting PC1 removed. 1290 SNPs removed, 24,494 SNPs remaining. (PCAtop5%PC1rem_NEUTRAL_testmissingindv_0.2_library1rem_NonNucrem.gen)
+E) Top 10% of SNPs affecting PC1 removed. 2579 SNPs removed, 23,205 SNPs remaining. (PCAtop10%PC1rem_NEUTRAL_testmissingindv_0.2_library1rem_NonNucrem.gen)
+F) Top 5% of SNPs affecting DAPC. 1290 SNPs removed, 24,494 SNPs remaining. (DAPCtop5%rem_NEUTRAL_testmissingindv_0.2_library1rem_NonNucrem.gen)
+G) Top 10% of SNPs affecting DAPC. 2579 SNPs removed, 23,205 SNPs remaining. (DAPCtop10%rem_NEUTRAL_testmissingindv_0.2_library1rem_NonNucrem.gen)
+H) Lane Effect Free Dataset. 319 individuals, 38,111 SNPs. (L4_LD_no2005_popmap5_NonNuc_LG_consensusoutliers_rem.gen)
