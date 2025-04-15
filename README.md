@@ -1,7 +1,7 @@
 # LaneEffects
 
 Here is supplementary information and dataset information for the Babaei et al. manuscript entitled '**Evaluating Ordination and Outlier Methods for Lane Effect Mitigation in Reduced Representation Sequencing Data**'.
-Authors: Sarah Babaei, Nathalie M. LeBlanc, Scott A. Pavey, Cassidy C. D'Aloia
+Authors:
 
 See **SupplementaryFiltering/txt** for more information regarding filtering for the original and lane-effect free datasets.
 
