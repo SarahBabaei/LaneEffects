@@ -1,8 +1,8 @@
-A) Before lane effect mitigation, 25,784 SNPs. 
-GENEPOP file: NEUTRAL_testmissingindv_0.2_library1rem_NonNucrem.gen
-
-B) Lane Effect Free Dataset. 319 individuals, 38,111 SNPs. 
+A) Lane Effect Free Dataset. 319 individuals, 38,111 SNPs. 
 GENEPOP file: L4_LD_no2005_popmap5_NonNuc_LG_consensusoutliers_rem.gen
+
+B) Before lane effect mitigation, 25,784 SNPs. 
+GENEPOP file: NEUTRAL_testmissingindv_0.2_library1rem_NonNucrem.gen
 
 C) snpgdsPCACorr >0.3 on PC1 and PC2. 119 SNPs removed, 25,665 SNPs remaining. 
 GENEPOP file: NEUTRAL_snpgdsPCACorr0.3_5pop_testmissingindv0.2_library1rem_NonNucrem.gen
