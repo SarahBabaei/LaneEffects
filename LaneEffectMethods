@@ -1,29 +1,31 @@
 A) Before lane effect mitigation, 25,784 SNPs. 
 GENEPOP file: NEUTRAL_testmissingindv_0.2_library1rem_NonNucrem.gen
 
-B) snpgdsPCACorr >0.3 on PC1 and PC2. 119 SNPs removed, 25,665 SNPs remaining. 
+B) Lane Effect Free Dataset. 319 individuals, 38,111 SNPs. 
+GENEPOP file: L4_LD_no2005_popmap5_NonNuc_LG_consensusoutliers_rem.gen
+
+C) snpgdsPCACorr >0.3 on PC1 and PC2. 119 SNPs removed, 25,665 SNPs remaining. 
 GENEPOP file: NEUTRAL_snpgdsPCACorr0.3_5pop_testmissingindv0.2_library1rem_NonNucrem.gen
 List of Loci removed: PC1_0.3.txt
 
-C) BayeScan outliers uncommon between the HiSeq and HiSeq+NovaSeq datasets. 955 SNPs removed, 24,829 SNPs remaining.
+D) BayeScan outliers uncommon between the HiSeq and HiSeq+NovaSeq datasets. 955 SNPs removed, 24,829 SNPs remaining.
 GENEPOP file: NEUTRAL_BAYESCANOUTLIERS_testmissingindv0.2_library1rem_NonNucrem.gen
 List of Loci removed: BayeScanOutliers.txt
 
-D) Top 5% of SNPs affecting PC1 removed. 1290 SNPs removed, 24,494 SNPs remaining. 
+E) Top 5% of SNPs affecting PC1 removed. 1290 SNPs removed, 24,494 SNPs remaining. 
 GENEPOP file: PCAtop5%PC1rem_NEUTRAL_testmissingindv_0.2_library1rem_NonNucrem.gen
 List of Loci removed: PCAtop5%PC1.txt
 
-E) Top 10% of SNPs affecting PC1 removed. 2579 SNPs removed, 23,205 SNPs remaining. 
+F) Top 10% of SNPs affecting PC1 removed. 2579 SNPs removed, 23,205 SNPs remaining. 
 GENEPOP file: PCAtop10%PC1rem_NEUTRAL_testmissingindv_0.2_library1rem_NonNucrem.gen
 List of Loci removed: PCAtop10%PC1.txt
 
-F) Top 5% of SNPs affecting DAPC. 1290 SNPs removed, 24,494 SNPs remaining. 
+G) Top 5% of SNPs affecting DAPC. 1290 SNPs removed, 24,494 SNPs remaining. 
 GENEPOP file: DAPCtop5%rem_NEUTRAL_testmissingindv_0.2_library1rem_NonNucrem.gen
 List of Loci removed: DAPCtop5%.txt
 
-G) Top 10% of SNPs affecting DAPC. 2579 SNPs removed, 23,205 SNPs remaining. 
+H) Top 10% of SNPs affecting DAPC. 2579 SNPs removed, 23,205 SNPs remaining. 
 GENEPOP file: DAPCtop10%rem_NEUTRAL_testmissingindv_0.2_library1rem_NonNucrem.gen
 List of Loci removed: DAPCtop10%.txt
 
-H) Lane Effect Free Dataset. 319 individuals, 38,111 SNPs. 
-GENEPOP file: L4_LD_no2005_popmap5_NonNuc_LG_consensusoutliers_rem.gen
+I) RDA mitigated
