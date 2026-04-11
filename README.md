@@ -14,3 +14,6 @@ BayeScan run information can be found in **BayeScan_CombinedDataset** and **Baye
 
 **PCAloadingsSQUARED_neutral.txt**: PCA loadings from PCA
 **DAPCLOADINGS_NEUTRAL_byBATCHno3Ps_testmissingindv_0.2_library1rem_NonNucrem.txt**: DAPC loadings from DAPC that ONLY included individuals that were present on both batches. This means this does not include any 3Ps individuals. 
+
+Code for the custom imputation function is **impute_RDA.R**. 
+**RDA.R** and **PCA.R** are scripts used to generate RDA and PCA plots, respectively.
