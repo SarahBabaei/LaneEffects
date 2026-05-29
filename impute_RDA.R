@@ -9,7 +9,7 @@ pl <- "NEUTRAL_testmissingindv_0.2_library1rem_NonNucrem.gen"
 read <- read.genepop(pl, ncode=3) #reads in genepop file
 
 lane <- "Ind_Lane.txt" #2 columns: one with individual ID and one with lane #(1or2)
-                       #Make sure that this file has individuals in the same order as the genepop file
+                       #Make sure that this file has individuals in same order as genepop file
 l <- read.table(lane)
 lane <- data.frame(l)
 lane_data <- factor(lane$V2)
@@ -36,10 +36,10 @@ rda_lane <- rda(genotype_matrix_imputed~lane_data, na.action=na.exclude)
 #plot RDA
 plot(rda_lane, scaling = 2, display = c("sites", "bp"))
 
-# add colors by lane
+#add colors by lane
 points(rda_lane, display = "sites", col = as.numeric(lane_data), pch = 19, scaling = 2)
 
-# add legend
+#add legend
 legend("topright", legend = levels(lane_data),
        col = 1:length(levels(lane_data)), pch = 19)
 
@@ -54,7 +54,6 @@ anova_terms
 #first, run the RDA using the non mitigated dataset (NEUTRAL_testmissingindv_0.2_library1rem_NonNucrem.gen)
 #do this above
 
-# Get species (SNP) scores
 snp_loadings <- scores(rda_lane, display = "species", scaling = 2)
 
 # For example, loadings on RDA1
@@ -63,7 +62,7 @@ axis1 <- snp_loadings[, 1]   # numeric vector of loadings per SNP
 mean_axis1 <- mean(axis1, na.rm = TRUE)
 sd_axis1 <- sd(axis1, na.rm = TRUE)
 
-# 4 standard deviation threshold
+#4 standard deviation threshold (as Forrester et al. 2022 did)
 upper <- mean_axis1 + 4 * sd_axis1
 lower <- mean_axis1 - 4 * sd_axis1
 
@@ -85,34 +84,39 @@ anova_terms
 #plot RDA
 plot(rda_stdev, scaling = 2, display = c("sites", "bp"))
 
-# add colors by lane
+#add colors by lane
 points(rda_stdev, display = "sites", col = as.numeric(lane_data), pch = 19, scaling = 2)
 
-# add legend
+#add legend
 legend("topright", legend = levels(lane_data),
        col = 1:length(levels(lane_data)), pch = 19)
 
 #PCA using this dataset to see if lane effect is gone
 library(adegenet)
 
-# Filtered genind (keep everything consistent)
+#filtered genind (keep everything consistent)
 genind_filtered <- read[, -outliers]
+print(levels(pop(genind_filtered)))
+levels(pop(genind_filtered))  <- c("3Ps", "Southern", "Northern", "GSL")
 
 #get PCA
-tab <- tab(genind_filtered, NA.method="mean")
-pca1 <- dudi.pca(tab, scannf = FALSE, scale = FALSE, nf=4) #nf=#of PC axes to retain
-temp <- as.integer(pop(read))
+tab_rda <- tab(genind_filtered, NA.method="mean")
+pca2 <- dudi.pca(tab_rda, scannf = FALSE, scale = FALSE, nf=4) #nf=#of PC axes to retain
+temp2 <- as.integer(pop(genind_filtered))
+
+#for procrustes: 
+pca2 <- dudi.pca(tab_rda, scannf = FALSE, scale = FALSE, nf=4) #nf=#of PC axes to retain
 
 #plot
-goodcolors <- c("black","#b2182b" ,"#fddbc7", "#92c5de", "#2166ac")
+goodcolors <- c("black","#b2182b" ,"#fddbc7", "#92c5de", "#2166ac", "green", "blue", "darkblue", "purple", "gray")
 s.class(pca1$li,pop(read),col=transp(goodcolors),xax=1,yax=2,axesel=FALSE, clabel = FALSE, cstar=0, cpoint = 2, grid=FALSE)
 legend("right", legend = levels(pop(read)), col=goodcolors, pch = 19, cex = 0.8)
 add.scatter.eig(pca1$eig[1:20],3,1,2, ratio=.2)
 
-# Basic PCA scatterplot without points
+# PCA without points
 plot(pca1$li[,1], pca1$li[,2], type = "n", xlab = "PC1", ylab = "PC2")
 
-# Add sample names instead of points
+#sample names instead of points
 text(pca1$li[,1], pca1$li[,2], labels = rownames(pca1$li), col = transp(goodcolors)[pop(read)])
 
 #variation and more PC info

@@ -55,13 +55,14 @@ lane_data <- factor(lane$V2)
 lane_data
 sum(is.na(lane_data)) #no missing data
 
+#mode imputation (take most common value)
 impute_mode <- function(x) {
-  mode_value <- as.numeric(names(sort(table(x), decreasing = TRUE)[1])) # Most frequent value
+  mode_value <- as.numeric(names(sort(table(x), decreasing = TRUE)[1]))
   x[is.na(x)] <- mode_value
   return(x)
 }
 
-# Apply this function to each column (locus) of the genotype matrix
+#apply function to each column (locus) of the genotype matrix
 genotype_matrix_clean <- apply(genotype_matrix, 2, impute_mode)
 nrow(genotype_matrix_clean)
 sum(is.na(genotype_matrix_clean))
@@ -79,13 +80,13 @@ plot(rda_lane, type = "none")
 points(rda_lane, display = "sites", col = group_colors, pch = 16)
 # Optionally, add ellipses for each lane group (or another grouping factor)
 pop <- ordiellipse(rda_lane, groups = lane_data, col = "black", lwd = 2)
-# Display RDA results
+#plotRDA
 rda_lane
 legend("topright", 
-       legend = levels(popmap),  # Use the levels of the day_data factor
-       col = colors,               # Use the colors for the legend
-       pch = 16,                   # Same point type used in the plot
-       title = "pop",    # Title for the legend
+       legend = levels(popmap),
+       col = colors,
+       pch = 16,
+       title = "pop",
        bty = "n")
 
 rda_lanenrow(genotype_matrix)
