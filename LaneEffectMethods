@@ -28,4 +28,4 @@ H) Top 10% of SNPs affecting DAPC. 2579 SNPs removed, 23,205 SNPs remaining.
 GENEPOP file: DAPCtop10%rem_NEUTRAL_testmissingindv_0.2_library1rem_NonNucrem.gen
 List of Loci removed: DAPCtop10%.txt
 
-I) RDA mitigated
+I) RDA mitigated. 422 SNPs removed.
