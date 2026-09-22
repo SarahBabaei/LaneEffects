@@ -29,3 +29,4 @@ GENEPOP file: DAPCtop10%rem_NEUTRAL_testmissingindv_0.2_library1rem_NonNucrem.ge
 List of Loci removed: DAPCtop10%.txt
 
 I) RDA mitigated. 422 SNPs removed.
+GDS file (can load right into adegenet): RDA_422SNPsREM_Corrected.rds
