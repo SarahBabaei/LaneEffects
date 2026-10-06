@@ -28,6 +28,11 @@ impute_mode <- function(x) {
 #impute using the global model imputation function built earlier
 genotype_matrix_imputed <- impute_mode(genotype_matrix)
 
+#export imputed dataset as genepop to keep for later
+#library(graph4lg) #package with genind2genepop function
+#read$tab <- genotype_matrix_imputed
+#any(is.na(read$tab)) #sanity check, should return FALSE since all NAs have been imputed
+#genind_to_genepop(read, output = "NEUTRAL_RDA_imputed.gen")
 
 ##################RDA######################
 #run RDA with imputed genotype matrix and lane data from earlier
@@ -98,6 +103,10 @@ library(adegenet)
 genind_filtered <- read[, -outliers]
 print(levels(pop(genind_filtered)))
 levels(pop(genind_filtered))  <- c("3Ps", "Southern", "Northern", "GSL")
+
+#export genind_filtered as RDS for later
+saveRDS(genind_filtered, file = "RDA_422SNPsREM_Corrected.rds")
+#RELOAD USING: genind_filtered <- readRDS("RDA_422SNPsREM_Corrected.rds")
 
 #get PCA
 tab_rda <- tab(genind_filtered, NA.method="mean")
