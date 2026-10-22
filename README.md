@@ -21,3 +21,5 @@ BayeScan run information can be found in **BayeScan_CombinedDataset** and **Baye
 Code for the custom imputation function is **impute_RDA.R**. 
 
 **RDA.R** and **PCA.R** are scripts used to generate RDA and PCA plots, respectively.
+
+**KRAKEN.zip**: KRAKEN2 output files for NovaSeq and HiSeq lanes and an excel file containing the t-test
