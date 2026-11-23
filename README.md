@@ -4,8 +4,8 @@ Here is supplementary information and dataset information for the Babaei et al. 
 
 Authors: Sarah Babaei, Nathalie M. LeBlanc, Sherrylynn Rowe, Divya A. Varkey, Aaron T. Adamack, Cassidy C. D’Aloia, Scott A. Pavey
 
-
-See **SupplementaryFiltering.txt** for more information regarding filtering for the original and lane-effect free datasets.
+See **PCA_MissingData_CorrPlots.xlsx** for more information about missing data in the mitigated PCAs
+See **SupplementaryFiltering.txt** for more information regarding filtering for the original and batch-effect free datasets.
 
 See **LaneEffectMethods.txt** for further information on each method and where to find its corresponding dataset.
 
