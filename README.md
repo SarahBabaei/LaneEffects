@@ -1,10 +1,11 @@
 # LaneEffects
 
-Here is supplementary information and dataset information for the Babaei et al. manuscript entitled '**Evaluating Ordination and Outlier Methods for Lane Effect Mitigation in Reduced Representation Sequencing Data**'.
+Here is supplementary information and dataset information for the Babaei et al. manuscript entitled '**Evaluating Post-Bioinformatic Methods for Batch Effect Mitigation in Reduced Representation Sequencing Data**'.
 
-Authors:
+Authors: Sarah Babaei, Nathalie M. LeBlanc, Sherrylynn Rowe, Divya A. Varkey, Aaron T. Adamack, Cassidy C. D’Aloia, Scott A. Pavey
 
-See **SupplementaryFiltering/txt** for more information regarding filtering for the original and lane-effect free datasets.
+
+See **SupplementaryFiltering.txt** for more information regarding filtering for the original and lane-effect free datasets.
 
 See **LaneEffectMethods.txt** for further information on each method and where to find its corresponding dataset.
 
